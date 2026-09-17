@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пульс — аналитика продаж на маркетплейсах</title>
+  <meta name="description" content="Пульс собирает продажи, остатки и позиции с МаркетА, Вайлдберри и ЯМаркета в один дашборд. Аналитика, которая растит прибыль селлера.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236C7CFF'/%3E%3Cpath d='M6 18h5l3-8 4 14 3-6h5' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="Пульс — на главную">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M6 18h5l3-8 4 14 3-6h5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__text">Пульс</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#features" class="nav__link">Возможности</a>
+        <a href="#pricing" class="nav__link">Тарифы</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#cta" class="btn btn--primary btn--sm">Попробовать бесплатно</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__tag">🔥 Скидка 30% на годовой тариф до конца месяца</span>
+          <h1 class="hero__title">Аналитика маркетплейсов, которая <span class="grad">растит прибыль</span></h1>
+          <p class="hero__text">
+            Пульс собирает продажи, остатки, рекламу и позиции с МаркетА, Вайлдберри
+            и ЯМаркета в один дашборд. Видно, что приносит деньги, а что их сжигает.
+          </p>
+          <form class="hero__form" id="demo-form" novalidate>
+            <input type="email" id="demo-email" placeholder="Рабочий e-mail" autocomplete="email">
+            <button type="submit" class="btn btn--primary">Получить демо</button>
+          </form>
+          <p class="hero__form-note" id="demo-note">14 дней бесплатно · без карты · настройка за 10 минут</p>
+        </div>
+
+        <!-- Дашборд, нарисованный на CSS/SVG -->
+        <div class="dashboard" aria-hidden="true">
+          <div class="dashboard__glow"></div>
+          <div class="dashboard__window">
+            <div class="dashboard__topbar">
+              <span></span><span></span><span></span>
+              <div class="dashboard__title">Обзор магазина · сентябрь</div>
+            </div>
+            <div class="dashboard__stats">
+              <div class="dstat">
+                <div class="dstat__label">Выручка</div>
+                <div class="dstat__value">1 248 400 ₽</div>
+                <div class="dstat__delta dstat__delta--up">+18,4%</div>
+              </div>
+              <div class="dstat">
+                <div class="dstat__label">Прибыль</div>
+                <div class="dstat__value">312 700 ₽</div>
+                <div class="dstat__delta dstat__delta--up">+9,1%</div>
+              </div>
+              <div class="dstat">
+                <div class="dstat__label">Выкуп</div>
+                <div class="dstat__value">76,2%</div>
+                <div class="dstat__delta dstat__delta--up">+2,8%</div>
+              </div>
+              <div class="dstat">
+                <div class="dstat__label">Реклама ДРР</div>
+                <div class="dstat__value">11,3%</div>
+                <div class="dstat__delta dstat__delta--down">−4,2%</div>
+              </div>
+            </div>
+            <div class="dashboard__chart">
+              <div class="dashboard__chart-head">
+                <span>Продажи по неделям</span>
+                <span class="dashboard__legend"><i class="dot dot--a"></i>МаркетА <i class="dot dot--b"></i>WB <i class="dot dot--c"></i>ЯМ</span>
+              </div>
+              <div class="bars">
+                <div class="bars__group"><i style="--h:42%" class="b-a"></i><i style="--h:30%" class="b-b"></i><i style="--h:18%" class="b-c"></i></div>
+                <div class="bars__group"><i style="--h:55%" class="b-a"></i><i style="--h:38%" class="b-b"></i><i style="--h:22%" class="b-c"></i></div>
+                <div class="bars__group"><i style="--h:48%" class="b-a"></i><i style="--h:52%" class="b-b"></i><i style="--h:26%" class="b-c"></i></div>
+                <div class="bars__group"><i style="--h:66%" class="b-a"></i><i style="--h:47%" class="b-b"></i><i style="--h:31%" class="b-c"></i></div>
+                <div class="bars__group"><i style="--h:78%" class="b-a"></i><i style="--h:56%" class="b-b"></i><i style="--h:35%" class="b-c"></i></div>
+                <div class="bars__group"><i style="--h:92%" class="b-a"></i><i style="--h:64%" class="b-b"></i><i style="--h:44%" class="b-c"></i></div>
+              </div>
+            </div>
+            <svg class="dashboard__line" viewBox="0 0 300 60" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#22D3EE" stop-opacity=".35"/>
+                  <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 48 L40 42 L80 45 L120 30 L160 34 L200 18 L240 22 L300 6 L300 60 L0 60 Z" fill="url(#lg)"/>
+              <path d="M0 48 L40 42 L80 45 L120 30 L160 34 L200 18 L240 22 L300 6" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="200" cy="18" r="4" fill="#22D3EE"/>
+            </svg>
+          </div>
+          <div class="dashboard__float dashboard__float--1">📦 Остаток «Футболка oversize» — 4 дня</div>
+          <div class="dashboard__float dashboard__float--2">⚡ Позиция поднялась на 12 строк</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- МАРКЕТПЛЕЙСЫ -->
+    <section class="markets">
+      <div class="container markets__inner">
+        <p class="markets__label">Работает с маркетплейсами:</p>
+        <div class="markets__logos">
+          <span class="market-logo">МАРКЕТА</span>
+          <span class="market-logo">ВАЙЛДБЕРРИ</span>
+          <span class="market-logo">ЯМАРКЕТ</span>
+          <span class="market-logo">МЕГАМУР</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВОЗМОЖНОСТИ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Всё, что нужно селлеру, <span class="grad">в одном окне</span></h2>
+          <p class="section-sub">Больше никаких таблиц на 40 вкладок и ручного сведения отчётов</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Юнит-экономика товара</h3>
+            <p>Считаем прибыль по каждому SKU с учётом комиссий, логистики, хранения и рекламы. Видно реальную маржу, а не оборот.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8l-9-5-9 5 9 5 9-5ZM3 8v8l9 5 9-5V8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v8"/></svg>
+            </div>
+            <h3>Контроль остатков</h3>
+            <p>Прогноз, на сколько дней хватит товара на складах FBO. Уведомим заранее — не словите «out of stock» и потерю позиций.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6"/></svg>
+            </div>
+            <h3>Позиции в поиске</h3>
+            <p>Ежедневно трекаем места ваших запросов в поиске и рекламе. Видно, что работает, ещё до того, как это увидит конкурент.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M2 10h20M6 15h4" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Финансы и комиссии</h3>
+            <p>Отчёты о реализации, удержания, штрафы и возмещения — всё сверено с кабинетами. Одна сводка вместо десяти PDF.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 21h4"/></svg>
+            </div>
+            <h3>Умные уведомления</h3>
+            <p>ТелеграмЧат-оповещения о падении позиций, критичных остатках и росте ДРР. Реагируете за минуты, а не раз в неделю.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" stroke-linecap="round"/><path d="M8 12h8"/></svg>
+            </div>
+            <h3>API и выгрузки</h3>
+            <p>Забирайте данные в свои BI и таблицы через REST API. Excel-выгрузки по расписанию — из коробки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="steps">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Подключение за 10 минут</h2>
+          <p class="section-sub">Без программистов и внедренцев — справится один человек</p>
+        </div>
+        <div class="steps__grid">
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <h3>Зарегистрируйтесь</h3>
+            <p>Нужен только e-mail. Карточку не спрашиваем — 14 дней бесплатного доступа без ограничений.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">2</div>
+            <h3>Подключите кабинеты</h3>
+            <p>Авторизация через API-ключи маркетплейсов. Данные за весь прошлый период подтянутся автоматически.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step__num">3</div>
+            <h3>Смотрите решения, а не цифры</h3>
+            <p>Дашборд сразу покажет точки роста: какие товары тянут прибыль и где вы теряете деньги.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦИФРЫ -->
+    <section class="metrics">
+      <div class="container metrics__grid">
+        <div class="metric reveal">
+          <div class="metric__value" data-count="12000" data-suffix="+">0</div>
+          <div class="metric__label">селлеров используют Пульс</div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__value" data-count="4.2" data-decimals="1" data-suffix=" млрд ₽">0</div>
+          <div class="metric__label">оборот клиентов под аналитикой</div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__value" data-count="27" data-suffix="%">0</div>
+          <div class="metric__label">средний рост прибыли за полгода</div>
+        </div>
+        <div class="metric reveal">
+          <div class="metric__value" data-count="99.9" data-decimals="1" data-suffix="%">0</div>
+          <div class="metric__label">аптайм сервиса</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТАРИФЫ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Прозрачные тарифы</h2>
+          <p class="section-sub">Платите за объём данных, а не за «функции про аналитику»</p>
+          <div class="pricing__toggle" role="group" aria-label="Период оплаты">
+            <button class="pricing__period is-active" data-period="month">Ежемесячно</button>
+            <button class="pricing__period" data-period="year">На год −20%</button>
+          </div>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="plan reveal">
+            <h3 class="plan__name">Старт</h3>
+            <p class="plan__desc">Для тех, кто только заходит на маркетплейсы</p>
+            <div class="plan__price"><span class="plan__amount" data-month="0" data-year="0">0</span> ₽<span class="plan__period">/мес</span></div>
+            <ul class="plan__list">
+              <li>1 кабинет маркетплейса</li>
+              <li>Базовая аналитика продаж</li>
+              <li>История 3 месяца</li>
+              <li>Отчёты в Excel</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--full">Начать бесплатно</a>
+          </article>
+
+          <article class="plan plan--popular reveal">
+            <span class="plan__badge">Выбор селлеров</span>
+            <h3 class="plan__name">Про</h3>
+            <p class="plan__desc">Для магазинов с оборотом от 300 тыс. ₽/мес</p>
+            <div class="plan__price"><span class="plan__amount" data-month="1990" data-year="1592">1990</span> ₽<span class="plan__period">/мес</span></div>
+            <ul class="plan__list">
+              <li>До 5 кабинетов</li>
+              <li>Юнит-экономика по SKU</li>
+              <li>Контроль остатков и позиций</li>
+              <li>ТелеграмЧат-уведомления</li>
+              <li>История весь период работы</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary btn--full">Попробовать 14 дней</a>
+          </article>
+
+          <article class="plan reveal">
+            <h3 class="plan__name">Бизнес</h3>
+            <p class="plan__desc">Для команд и брендов с несколькими магазинами</p>
+            <div class="plan__price"><span class="plan__amount" data-month="4990" data-year="3992">4990</span> ₽<span class="plan__period">/мес</span></div>
+            <ul class="plan__list">
+              <li>Неограниченно кабинетов</li>
+              <li>Доступы для команды</li>
+              <li>REST API и выгрузки по расписанию</li>
+              <li>Персональный аналитик</li>
+              <li>SLA 99,9% и поддержка 24/7</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--full">Связаться с нами</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Что говорят селлеры</h2>
+        </div>
+        <div class="slider">
+          <div class="slider__viewport">
+            <div class="slider__track" id="rev-track">
+              <article class="review">
+                <div class="review__text">«Раньше сводил выручку трёх кабинетов в Google-таблицах по вечерам. Пульс сделал это за меня — и нашёл SKU, который полгода продавался нам в минус».</div>
+                <div class="review__author">Дмитрий К. · электроника · оборот 2,1 млн ₽/мес</div>
+              </article>
+              <article class="review">
+                <div class="review__text">«Уведомление о критичном остатке спасло нам выходные: успели отгрузить на FBO до того, как карточка вылетела из топа. Аптайм и поддержка — на пять».</div>
+                <div class="review__author">Анна и Пётр · товары для дома · оборот 5,4 млн ₽/мес</div>
+              </article>
+              <article class="review">
+                <div class="review__text">«Юнит-экономика в реальном времени — то, за что платишь не думая. Видно ДРР по каждой кампании и сразу понятно, где режем бюджет».</div>
+                <div class="review__author">Марат С. · косметика · оборот 900 тыс. ₽/мес</div>
+              </article>
+            </div>
+          </div>
+          <div class="slider__nav">
+            <button class="slider__arrow" id="rev-prev" aria-label="Предыдущий отзыв">←</button>
+            <div class="slider__dots" id="rev-dots"></div>
+            <button class="slider__arrow" id="rev-next" aria-label="Следующий отзыв">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container faq__container">
+        <div class="section-head">
+          <h2 class="section-title">Частые вопросы</h2>
+        </div>
+        <div class="accordion" id="accordion">
+          <details class="acc__item">
+            <summary>Что такое «Пульс» и кому он нужен?<span class="acc__icon" aria-hidden="true"></span></summary>
+            <p>Это сервис аналитики для продавцов маркетплейсов. Мы подтягиваем данные из кабинетов МаркетА, Вайлдберри, ЯМаркета и МегаМаркета и показываем прибыль, остатки, позиции и рекламу в одном дашборде.</p>
+          </details>
+          <details class="acc__item">
+            <summary>Нужна ли банковская карта для пробного периода?<span class="acc__icon" aria-hidden="true"></span></summary>
+            <p>Нет. 14 дней полного доступа без карты и автопродлений. По окончании аккаунт просто перейдёт на бесплатный тариф «Старт».</p>
+          </details>
+          <details class="acc__item">
+            <summary>Безопасно ли давать API-ключи кабинетов?<span class="acc__icon" aria-hidden="true"></span></summary>
+            <p>Мы работаем только через официальные API маркетплейсов в режиме чтения. Ключи шифруются, данные не передаются третьим лицам, а доступ можно отозвать в любой момент.</p>
+          </details>
+          <details class="acc__item">
+            <summary>За какой период подтянутся данные?<span class="acc__icon" aria-hidden="true"></span></summary>
+            <p>Вся доступная история ваших кабинетов — обычно с момента регистрации магазина на маркетплейсе. На бесплатном тарифе виден последний год.</p>
+          </details>
+          <details class="acc__item">
+            <summary>Можно ли отменить подписку в любой момент?<span class="acc__icon" aria-hidden="true"></span></summary>
+            <p>Да, подписка отменяется в два клика из личного кабинета. Оплаченный период остаётся активным до конца, деньги за неиспользованные месяцы возвращаем.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <div class="cta__card reveal">
+          <h2 class="cta__title">Узнайте за 10 минут, <span class="grad">где вы теряете деньги</span></h2>
+          <p class="cta__text">Подключите первый кабинет и получите готовый разбор юнит-экономики уже сегодня.</p>
+          <form class="cta__form" id="cta-form" novalidate>
+            <input type="email" id="cta-email" placeholder="Рабочий e-mail" autocomplete="email">
+            <button type="submit" class="btn btn--primary">Получить демо</button>
+          </form>
+          <p class="cta__note" id="cta-note">14 дней бесплатно · без карты · поддержка на русском</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--wide">
+        <a href="#" class="logo logo--footer">Пульс</a>
+        <p>Аналитика продаж на маркетплейсах.<br>Москва</p>
+      </div>
+      <div class="footer__col">
+        <h4>Продукт</h4>
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="mailto:hi@pulse-analytics.ru">hi@pulse-analytics</a>
+        <a href="tel:+74951234567">+7 (000) 000-00-00</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 «Пульс» — демо-проект для портфолио. Сервис, компания, контакты и отзывы вымышлены; формы работают в демо-режиме и никуда не отправляют данные.</span>
+      <span>Все названия вымешленные.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
